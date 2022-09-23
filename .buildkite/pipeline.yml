@@ -1,5 +1,5 @@
 steps:
-    - command: 'yarn install && yarn test'
-      label: ':llama: Installing'
-    - command: 'yarn install && yarn lint'
-      label: ':broom: Linting'
+  - command: 'yarn install && yarn test'
+    label: ':llama: Installing'
+  - command: 'yarn install && yarn lint'
+    label: ':broom: Linting'
