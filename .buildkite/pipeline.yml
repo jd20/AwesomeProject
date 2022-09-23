@@ -1,0 +1,9 @@
+steps:
+  - command: 'yarn install && yarn test'
+    label: ':car: Installing'
+
+  - command: 'yarn test'
+    label: ':one-does-not-simply: Tests'
+
+  - command: 'yarn lint'
+    label: ':llama: Linting'
