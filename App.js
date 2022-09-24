@@ -9,6 +9,7 @@
 import React from 'react'
 import type { Node } from 'react'
 import {
+    Button,
     SafeAreaView,
     ScrollView,
     StatusBar,
@@ -63,6 +64,8 @@ const App: () => Node = () => {
         backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
     }
 
+    const [message, setMessage] = React.useState('Welcome')
+
     return (
         <SafeAreaView style={backgroundStyle}>
             <StatusBar
@@ -81,7 +84,18 @@ const App: () => Node = () => {
                             : Colors.white,
                     }}
                 >
-                    <Section title='Step One'>
+                    <Button
+                        title='Hello'
+                        testID='hello_button'
+                        onPress={() => setMessage('Hello!!!')}
+                    />
+                    <Button
+                        title='World'
+                        testID='world_button'
+                        onPress={() => setMessage('World!!!')}
+                    />
+                    <Text testID='welcome'>{message}</Text>
+                    <Section title={'Step One'}>
                         Edit <Text style={styles.highlight}>App.js</Text> to
                         change the screen and then head back to see your edits.
                     </Section>
